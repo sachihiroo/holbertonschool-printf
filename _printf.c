@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i+1] == f[j].str)
 				{
+					i++;
 					f[j].print(&args);
 					break;
 				}

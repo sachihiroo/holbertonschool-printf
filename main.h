@@ -7,4 +7,12 @@
 int _putchar(char  c);
 int str(char *c);
 int _printf(const char *format, ...);
+typedef struct form
+{
+	char str;
+	void (*print)(va_list *);
+}fmt;
+void char_print(va_list *args);
+void pert_print(va_list *args);
+void string_print(va_list *args);
 #endif

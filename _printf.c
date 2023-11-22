@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{'s', string_print},
 		{'\0', NULL},
 	};
-	unsigned int i, j, size=0;
+	unsigned int i, j, size = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -25,16 +25,18 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			size++;
 		}
-		for (j = 0; f[j].str < '\0'; j++)
+		else
 		{
-			if (format[i + 1] == f[j].str)
+			for (j = 0; f[j].str < '\0'; j++)
 			{
-				f[j].print(&args);
-				size+=string_length(args);
-				i++;
-				break;
+				if (format[i + 1] == f[j].str)
+				{
+					f[j].print(&args);
+					size += string_length(args);
+					i++;
+					break;
+				}
 			}
-			
 		}
 	}
 	va_end(args);

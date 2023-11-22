@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i+1] == f[j].str)
 				{
-					f[j].print(args);
+					f[j].print(&args);
 					break;
 				}
 			size += string_length(args);

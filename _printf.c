@@ -30,9 +30,8 @@ int _printf(const char *format, ...)
 			{
 				f[j].print(&args);
 			}
-			i++;
 		}
 	}
 	va_end(args);
-	return (1);
+	return (j);
 }

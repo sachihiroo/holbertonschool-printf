@@ -24,12 +24,12 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[i]);
 		}
+		i++;
 		for (j = 0; f[j].str < '\0'; j++)
 		{
 			if (format[i + 1] == f[j].str)
 			{
 				f[j].print(&args);
-				i++;
 			}
 		}
 	}

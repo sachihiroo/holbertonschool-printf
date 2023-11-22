@@ -29,11 +29,12 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == f[j].str)
 			{
 				f[j].print(&args);
+				size+=string_length(args);
 			}
 			
 		}
 		size += 1;
 	}
 	va_end(args);
-	return (2);
+	return (size);
 }

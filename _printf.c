@@ -29,11 +29,11 @@ int _printf(const char *format, ...)
 			if (f[j].str == format[i + 1])
 			{
 				f[j].print(&args);
+				i++;
 				break;
 			}
 		}
 	}
-
 	va_end(args);
 	return (0);
 }

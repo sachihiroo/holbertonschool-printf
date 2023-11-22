@@ -13,7 +13,7 @@ void char_print(va_list *args)
  *
  *
  */
-void pert_print(va_list *args)
+void pert_print()
 {
 	_putchar('%');
 }

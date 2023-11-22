@@ -13,6 +13,6 @@ typedef struct form
 	void (*print)(va_list *);
 }fmt;
 void char_print(va_list *args);
-void pert_print(va_list *args);
+void pert_print();
 void string_print(va_list *args);
 #endif

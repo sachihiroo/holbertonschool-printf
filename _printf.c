@@ -36,5 +36,5 @@ int _printf(const char *format, ...)
 		size += 1;
 	}
 	va_end(args);
-	return (size);
+	return (size-1);
 }

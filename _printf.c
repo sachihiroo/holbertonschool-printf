@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		{
 			for (j = 0; f[j].str <= '\0'; j++)
 			{
-				if (format[i + 1] == f[j].str)
+				if (format[i] == f[j].str)
 				{
 					f[j].print(&args);
 					size += string_length(args);

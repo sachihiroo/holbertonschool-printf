@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			for (j = 0; f[j].str < '\0'; j++)
+			for (j = 0; f[j].str <= '\0'; j++)
 			{
 				if (format[i + 1] == f[j].str)
 				{
@@ -36,7 +36,6 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-		i--;
 		}
 	}
 	va_end(args);

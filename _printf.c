@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{'s', string_print},
 		{'\0', NULL},
 	};
-	unsigned int i, j, size;
+	unsigned int i, j, size=0;
 	va_list args;
 
 	va_start(args, format);

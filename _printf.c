@@ -30,9 +30,10 @@ int _printf(const char *format, ...)
 			{
 				f[j].print(&args);
 			}
+			
 		}
 		size += 1;
 	}
 	va_end(args);
-	return (0);
+	return (1);
 }

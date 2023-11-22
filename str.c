@@ -4,9 +4,8 @@
  * @c: char
  * Return: i
  */
-int str(char *c)
+void str(char *c)
 {
-	int i;
 
 	if (c == NULL)
 	{
@@ -18,6 +17,4 @@ int str(char *c)
 
 		_putchar(c[i]);
 	}
-
-	return (i);
 }

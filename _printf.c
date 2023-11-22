@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[i]);
 		}
-		for (j = 0; f[j].str < '\0'; j++)
+		for (j = 0; f[j].str < '\0'; i++)
 		{
 			if (format[i + 1] == f[j].str)
 			{
@@ -34,5 +34,5 @@ int _printf(const char *format, ...)
 		size += 1;
 	}
 	va_end(args);
-	return (j + size);
+	return (i);
 }

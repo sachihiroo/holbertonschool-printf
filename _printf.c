@@ -34,10 +34,10 @@ int _printf(const char *format, ...)
 					f[j].print(&args);
 					break;
 				}
-					size += string_length(args);
-					printf("%d",size);
 			}
 		}
+		size += string_length(args);
+		printf("%d", size);
 	}
 	va_end(args);
 	return (size);

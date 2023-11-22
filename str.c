@@ -6,6 +6,7 @@
  */
 void str(char *c)
 {
+	int i;
 
 	if (c == NULL)
 	{

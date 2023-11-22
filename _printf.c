@@ -6,7 +6,13 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i, byte, s_count;
+	fmt f[] = {
+		{'c', char_print},
+		{'%', pert_print},
+		{'s', string_print},
+		{'\0', NULL},
+	};
+	unsigned int i, j;
 	va_list args;
 
 	va_start(args, format);
@@ -18,29 +24,16 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[i]);
 		}
-		else if (format[i + 1] == 'c')
+		for (j = 0; f[j].str == '\0'; i++)
 		{
-			_putchar(va_arg(args, int));
-			i++;
+			if (f[j].str == format[i + 1])
+			{
+				f[j].print(&args);
+				break;
+			}
 		}
-		else if (format[i + 1] == 's')
-		{
-			s_count = str(va_arg(args, char *));
-			i++;
-			byte += (s_count - 1);
-		}
-		else if (format[i + 1] == '%')
-		{
-			_putchar('%');
-			i++;
-		}
-		else if (format[i + 1])
-		{
-			_putchar('%');
-		}
-
-		byte += 1;
 	}
+
 	va_end(args);
-	return (byte);
+	return (0);
 }

@@ -29,15 +29,14 @@ int _printf(const char *format, ...)
 		{
 			for (j = 0; f[j].str <= '\0'; j++)
 			{
-				if (format[i] == f[j].str)
+				if (format[i+1] == f[j].str)
 				{
 					f[j].print(&args);
 					break;
 				}
+			size += string_length(args);
 			}
 		}
-		size += string_length(args);
-		printf("%d", size);
 	}
 	va_end(args);
 	return (size);

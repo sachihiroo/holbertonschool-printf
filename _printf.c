@@ -33,11 +33,11 @@ int _printf(const char *format, ...)
 				{
 					f[j].print(&args);
 					size += string_length(args);
-					i--;
 					break;
 				}
 			}
 		}
+		i++;
 	}
 	va_end(args);
 	return (size);

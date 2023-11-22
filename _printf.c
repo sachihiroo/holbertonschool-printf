@@ -15,22 +15,14 @@ int _printf(const char *format, ...)
 	unsigned int i, j;
 	va_list args;
 
-
 	va_start(args, format);
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] != '%')
 		{
-			if (format[i + 1] == '\0')
-			{
-				return (-1);
-			}
-			else if (format[i + 1] == '%')
-			{
-				_putchar('%');
-			}
+			_putchar(format[i]);
 		}
 		for (j = 0; f[j].str <= '\0'; j++)
 		{

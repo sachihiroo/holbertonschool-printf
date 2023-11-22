@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 				f[j].print(&args);
 			}
 		}
+		i++;
 	}
 	va_end(args);
 	return (j+i);

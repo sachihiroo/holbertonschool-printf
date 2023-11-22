@@ -23,7 +23,6 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
-			size += 1;
 		}
 		for (j = 0; f[j].str < '\0'; j++)
 		{
@@ -32,6 +31,7 @@ int _printf(const char *format, ...)
 				f[j].print(&args);
 			}
 		}
+		size += 1;
 	}
 	va_end(args);
 	return (j + size);

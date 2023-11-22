@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[i]);
 		}
-		for (j = 0; f[j].str == '\0'; j++)
+		for (j = 0; f[j].str < '\0'; j++)
 		{
 			if (f[j].str == format[i + 1])
 			{

@@ -28,11 +28,11 @@ int _printf(const char *format, ...)
 				{
 					f[j].print(&args);
 					size += string_length(args);
-					size--;
 					i++;
 					break;
 				}
 			}
+		size-=1;
 		}
 		else
 		{

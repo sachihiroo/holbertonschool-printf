@@ -32,13 +32,12 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-		size-=1;
 		}
 		else
 		{
 			_putchar(format[i]);
+		size -= 1;
 		}
-		size++;
 	}
 	va_end(args);
 	return (size);

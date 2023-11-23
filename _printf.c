@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{'s', string_print},
 		{'\0', NULL},
 	};
-	unsigned int i, j, num = 0;
+	unsigned int i, j;
 	va_list args;
 
 	va_start(args, format);
@@ -23,17 +23,16 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
+			size++;
 		}
-		for (j = 0; f[j].str <= '\0'; j++)
 		{
 			if (f[j].str == format[i + 1])
 			{
 				f[j].print(&args);
-				num = num + (count(args));
 			}
 		}
 		num = num + 1;
 	}
 	va_end(args);
-	return (num - 1);
+	return (i);
 }

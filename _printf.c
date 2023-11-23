@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{'s', string_print},
 		{'\0', NULL},
 	};
-	unsigned int i, j;
+	unsigned int i, j, num = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -29,9 +29,11 @@ int _printf(const char *format, ...)
 			if (f[j].str == format[i + 1])
 			{
 				f[j].print(&args);
+				num = num + (count(args));
 			}
 		}
+		num = num + 1;
 	}
 	va_end(args);
-	return (i);
+	return (num - 1);
 }

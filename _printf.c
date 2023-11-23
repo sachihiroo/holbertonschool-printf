@@ -37,9 +37,8 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[i]);
-			size++;
 		}
 	}
 	va_end(args);
-	return (size);
+	return (size + i);
 }

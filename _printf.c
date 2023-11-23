@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			size++;
 		}
-		else
 		{
 			for (j = 0; f[j].str != '\0'; j++)
 			{
@@ -33,8 +32,8 @@ int _printf(const char *format, ...)
 				{
 					f[j].print(&args);
 					size += string_length(args);
-					break;
 				}
+				break;
 			}
 		}
 	}

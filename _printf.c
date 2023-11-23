@@ -18,18 +18,18 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-	for (i = 0; format[i] != '\0'; j++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i + 1] != '%')
+		if (format[i] != '%')
 		{
 			_putchar(format[i]);
 			size++;
 		}
 		else
 		{
-			for (j = 0; f[j].str <= '\0'; j++)
+			for (j = 0; f[j].str != '\0'; j++)
 			{
-				if (format[i] == f[j].str)
+				if (format[i + 1] == f[j].str)
 				{
 					f[j].print(&args);
 					size += string_length(args);

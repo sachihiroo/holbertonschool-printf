@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 				{
 					f[j].print(&args);
 					size += string_length(args);
-					size -= 1;
+					size--;
 					i++;
 					break;
 				}
@@ -38,6 +38,7 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[i]);
 		}
+		size++;
 	}
 	va_end(args);
 	return (size);

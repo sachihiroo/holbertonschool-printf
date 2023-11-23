@@ -27,9 +27,9 @@ int _printf(const char *format, ...)
 				if (f[j].str == format[i + 1])
 				{
 					f[j].print(&args);
+					i++;
 					s_count = string_length(args);
 					size += (s_count - 1);
-					i++;
 					break;
 				}
 			}

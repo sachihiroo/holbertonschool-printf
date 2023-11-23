@@ -20,18 +20,25 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] != '%')
+		if (format[i] == '%')
+		{
+			for (j = 0; f[j].str != '\0'; j++)
+			{
+				if (f[j].str == format[i + 1])
+				{
+					f[j].print(&args);
+					size += string_length(args);
+					i++;
+					break;
+				}
+			}
+		}
+		else
 		{
 			_putchar(format[i]);
 			size++;
 		}
-		{
-			if (f[j].str == format[i + 1])
-			{
-				f[j].print(&args);
-			}
-		}
 	}
 	va_end(args);
-	return (i);
+	return (size);
 }

@@ -16,8 +16,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			size += get_fun(format[i+1],args);
-			
+			size += get_fun(format[i + 1], args);
+			i += 1;
 		}
 		else
 		{

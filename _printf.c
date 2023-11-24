@@ -29,6 +29,12 @@ int _printf(const char *format, ...)
 				{
 					size = size + f[j].print(&args);
 					i += 2;
+					if (format[i + 1] == '\0')
+					{
+						i--;
+						break;
+					}
+
 					size -= 1;
 					break;
 				}

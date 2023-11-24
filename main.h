@@ -6,15 +6,14 @@
 #include <stdarg.h>
 #include <unistd.h>
 int _putchar(char  c);
-void str(char *c);
+int str(char *c);
 int _printf(const char *format, ...);
 typedef struct form
 {
 	char str;
-	void (*print)(va_list *);
+	int (*print)(va_list *);
 }fmt;
-int string_length(va_list args);
-void char_print(va_list *args);
-void pert_print();
-void string_print(va_list *args);
+int char_print(va_list *args);
+int pert_print();
+int string_print(va_list *args);
 #endif

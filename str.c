@@ -4,13 +4,14 @@
  * @c: char
  * Return: i
  */
-void str(char *c)
+int str(char *c)
 {
 	int i;
 
 	if (c == NULL)
 	{
 		c = "(null)";
+		return(6);
 	}
 
 	for (i = 0; c[i] != '\0'; i++)
@@ -18,4 +19,5 @@ void str(char *c)
 
 		_putchar(c[i]);
 	}
+	return (i);
 }

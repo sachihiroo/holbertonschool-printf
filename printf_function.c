@@ -3,23 +3,39 @@
  * char_print - check the code
  * @args: pointer
  */
-void char_print(va_list *args)
+int char_print(va_list *args)
 {
 	_putchar(va_arg(*args, int));
+	return (1);
 }
 /**
  * pert_print - check the code
  * @args: pointer
  */
-void pert_print(void)
+int pert_print()
 {
 	_putchar('%');
+	return (1);
 }
 /**
  * string_print
  * @args: pointer
  */
-void string_print(va_list *args)
+int string_print(va_list *args)
 {
-	str(va_arg(*args, char *));
+	char *str;
+	int i;
+	str = va_arg(*args, char *);
+	if (str == NULL)
+	{
+		str = "(null)";
+		return (6);
+	}
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+
+		_putchar(str[i]);
+	}
+	return (i);
 }

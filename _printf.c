@@ -28,11 +28,11 @@ int _printf(const char *format, ...)
 				if (f[j].str == format[i + 1])
 				{
 					size = size + f[j].print(&args);
+					i++;
+					size -= 1;
 					break;
 				}
 			}
-			i++;
-			size -= 1;
 		}
 		_putchar(format[i]);
 		size += 1;

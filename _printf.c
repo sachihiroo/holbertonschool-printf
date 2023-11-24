@@ -31,7 +31,6 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-			i++;
 			if (format[i] == 'c' || format[i] == 's')
 			{
 				i++;

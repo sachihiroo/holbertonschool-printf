@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 	};
 	unsigned int i = 0, j = 0;
 	int size = 0;
+	int chack = 1;
 	va_list args;
 
 	va_start(args, format);
@@ -29,7 +30,14 @@ int _printf(const char *format, ...)
 				{
 					size = size + f[j].print(&args);
 					i += 1;
+					chack = 0;
 					break;
+				}
+				else if (chack == 1)
+				{
+					_putchar('%');
+					size += 2;
+					chack = 0;
 				}
 			}
 		}

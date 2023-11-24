@@ -11,6 +11,7 @@ int char_print(va_list *args)
 }
 /**
  * pert_print - check the code
+ * @args: pointer
  * Return: size
  */
 int pert_print(__attribute__((unused)) va_list *args)
@@ -27,6 +28,7 @@ int string_print(va_list *args)
 {
 	char *str;
 	int i;
+
 	str = va_arg(*args, char *);
 	if (str == NULL)
 	{

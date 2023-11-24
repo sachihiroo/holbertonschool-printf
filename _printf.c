@@ -32,6 +32,7 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
+			size -= 1;
 		}
 		_putchar(format[i]);
 		size += 1;

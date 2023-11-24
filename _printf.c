@@ -29,7 +29,6 @@ int _printf(const char *format, ...)
 				{
 					size = size + f[j].print(&args);
 					i += 1;
-					size -= 1;
 					break;
 				}
 			}

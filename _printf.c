@@ -28,11 +28,9 @@ int _printf(const char *format, ...)
 				if (f[j].str == format[i + 1])
 				{
 					size = size + f[j].print(&args);
-					i += 2;
-					if (format[i + 1] == '\0')
+					if (format[i + 2] != '\0')
 					{
-						i--;
-						break;
+						i += 2;
 					}
 
 					size -= 1;

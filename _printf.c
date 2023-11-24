@@ -33,14 +33,13 @@ int _printf(const char *format, ...)
 			}
 			i++;
 			size -= 1;
-			if (format[i] == 'c' || format[i] == 's')
-			{
-				i++;
-			}
-
+		}
+		if (format[i] == 'c' || format[i] == 's')
+		{
+			i++;
 		}
 		_putchar(format[i]);
-		size = 1;
+		size += 1;
 	}
 	va_end(args);
 	return (size);

@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 				if (f[j].str == format[i + 1])
 				{
 					size = size + f[j].print(&args);
-					i++;
+					i += 2;
 					size -= 1;
 					break;
 				}

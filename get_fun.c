@@ -12,6 +12,9 @@ int get_fun(char format, va_list args)
 		{'c', char_print},
 		{'%', pert_print},
 		{'s', string_print},
+		{'i', num_print},
+		{'d', num_print},
+		{'u', unsigned_num},
 		{'\0', NULL},
 	};
 

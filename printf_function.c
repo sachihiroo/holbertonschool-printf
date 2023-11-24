@@ -42,5 +42,3 @@ int string_print(va_list args)
 	}
 	return (i);
 }
-
-

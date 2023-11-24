@@ -7,13 +7,14 @@
 #include <unistd.h>
 int _putchar(char c);
 int _printf(const char *format, ...);
+int get_fun(char format, va_list args);
 typedef struct form
 {
 	char str;
 
-	int (*print)(va_list *);
+	int (*print)(va_list args);
 } fmt;
-int char_print(va_list *args);
-int pert_print(__attribute__((unused)) va_list *args);
-int string_print(va_list *args);
+int char_print(va_list args);
+int pert_print(__attribute__((unused)) va_list args);
+int string_print(va_list args);
 #endif

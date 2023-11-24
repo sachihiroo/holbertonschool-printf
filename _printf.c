@@ -6,13 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	fmt f[] = {
-		{'c', char_print},
-		{'%', pert_print},
-		{'s', string_print},
-		{'\0', NULL},
-	};
-	int i = 0, j = 0, size = 0, chack = 1;
+	int i = 0, size = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -22,23 +16,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			chack = 1;
-			for (j = 0; f[j].str != '\0'; j++)
-			{
-				if (f[j].str == format[i + 1])
-				{
-					size = size + f[j].print(&args);
-					i += 1;
-					chack = 0;
-					break;
-				}
-			}
-			if (chack == 1)
-			{
-				_putchar('%');
-				size += 1;
-				chack = 0;
-			}
+			size += get_fun(format[i+1],args);
+			
 		}
 		else
 		{

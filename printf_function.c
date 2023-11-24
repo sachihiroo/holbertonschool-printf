@@ -4,9 +4,9 @@
  * @args: pointer
  * Return: size
  */
-int char_print(va_list *args)
+int char_print(va_list args)
 {
-	_putchar(va_arg(*args, int));
+	_putchar(va_arg(args, int));
 	return (1);
 }
 /**
@@ -14,7 +14,7 @@ int char_print(va_list *args)
  * @args: pointer
  * Return: size
  */
-int pert_print(__attribute__((unused)) va_list *args)
+int pert_print(__attribute__((unused)) va_list args)
 {
 	_putchar('%');
 	return (1);
@@ -24,12 +24,12 @@ int pert_print(__attribute__((unused)) va_list *args)
  * @args: pointer
  * Return: size
  */
-int string_print(va_list *args)
+int string_print(va_list args)
 {
 	char *str;
 	int i;
 
-	str = va_arg(*args, char *);
+	str = va_arg(args, char *);
 	if (str == NULL)
 	{
 		str = "(null)";
@@ -42,3 +42,5 @@ int string_print(va_list *args)
 	}
 	return (i);
 }
+
+

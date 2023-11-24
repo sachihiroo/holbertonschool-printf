@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 		{'\0', NULL},
 	};
 	unsigned int i = 0, j = 0;
-	int size = 0;
+	int size = 0, and = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -21,7 +21,6 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		size += 1;
 		if (format[i] == '%')
 		{
 			for (j = 0; f[j].str != '\0'; j++)
@@ -35,7 +34,8 @@ int _printf(const char *format, ...)
 			}
 		}
 		_putchar(format[i]);
+		and += 1;
 	}
 	va_end(args);
-	return (size);
+	return (size + and);
 }

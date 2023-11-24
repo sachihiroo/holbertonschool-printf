@@ -33,12 +33,12 @@ int _printf(const char *format, ...)
 					chack = 0;
 					break;
 				}
-				else if (chack == 1)
-				{
-					_putchar('%');
-					size += 2;
-					chack = 0;
-				}
+			}
+			if (chack == 1)
+			{
+				_putchar('%');
+				size += 1;
+				chack = 0;
 			}
 		}
 		else

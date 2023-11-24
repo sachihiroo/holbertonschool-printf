@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
+		size += 1;
 		if (format[i] == '%')
 		{
 			for (j = 0; f[j].str != '\0'; j++)
@@ -29,13 +30,10 @@ int _printf(const char *format, ...)
 				{
 					size = size + f[j].print(&args);
 					i += 2;
-					size -= 1;
 					break;
 				}
 			}
 		}
-
-		size += 1;
 		_putchar(format[i]);
 	}
 	va_end(args);

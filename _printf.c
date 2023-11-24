@@ -28,16 +28,14 @@ int _printf(const char *format, ...)
 				if (f[j].str == format[i + 1])
 				{
 					size = size + f[j].print(&args);
-					i += 1;
+					i += 2;
 					break;
 				}
 			}
 		}
-		else if (format[i] != '%')
-		{
-			_putchar(format[i]);
-			size += 1;
-		}
+
+		_putchar(format[i]);
+		size += 1;
 	}
 	va_end(args);
 	return (size);

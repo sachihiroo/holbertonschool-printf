@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			chack = 1;
 			for (j = 0; f[j].str != '\0'; j++)
 			{
 				if (f[j].str == format[i + 1])

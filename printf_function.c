@@ -2,6 +2,7 @@
 /**
  * char_print - check the code
  * @args: pointer
+ * Return: size
  */
 int char_print(va_list *args)
 {
@@ -10,7 +11,7 @@ int char_print(va_list *args)
 }
 /**
  * pert_print - check the code
- * @args: pointer
+ * Return: size
  */
 int pert_print()
 {
@@ -18,8 +19,9 @@ int pert_print()
 	return (1);
 }
 /**
- * string_print
+ * string_print - check the code
  * @args: pointer
+ * Return: size
  */
 int string_print(va_list *args)
 {

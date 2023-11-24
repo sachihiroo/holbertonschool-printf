@@ -12,9 +12,7 @@ int _printf(const char *format, ...)
 		{'s', string_print},
 		{'\0', NULL},
 	};
-	unsigned int i = 0, j = 0;
-	int size = 0;
-	int chack = 1;
+	int i = 0, j = 0, size = 0, chack = 1;
 	va_list args;
 
 	va_start(args, format);

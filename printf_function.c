@@ -13,7 +13,7 @@ int char_print(va_list *args)
  * pert_print - check the code
  * Return: size
  */
-int pert_print()
+int pert_print(__attribute__((unused))va_list *args)
 {
 	_putchar('%');
 	return (1);

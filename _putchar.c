@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _putchar - Entry point
+ * _putchar - Print char
  * @c: char
- * Return: char
+ * Return: size
  */
 int _putchar(char c)
 {

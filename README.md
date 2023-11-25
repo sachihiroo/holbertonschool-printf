@@ -1,6 +1,8 @@
+![Project Logo](https://camo.githubusercontent.com/64c35dd60391e2c90277729276aa86cc921b0ad2/68747470733a2f2f692e6962622e636f2f546b32425a79542f776f72646d61726b2d63686572727937322e706e67)
+
 # holbertonschool-printf
 
-Welcome to the holberton-printf repository! This project is part of the curriculum at Holberton School and focuses on creating a custom implementation of the `printf` function in C. The goal is to replicate the standard functionality of `printf` while exploring the intricacies of string formatting and output generation.
+Welcome to the holberton-printf repository! This project is part of the curriculum at Holberton School and focuses on creating a custom implementation of the `_printf` function in C. The goal is to replicate the standard functionality of `_printf` while exploring the intricacies of string formatting and output generation.
 
 ## Project Overview
 
@@ -8,7 +10,7 @@ This project aims to implement a custom `_printf` function capable of handling v
 
 ### Features
 
-- **Custom Format Specifiers**: Extends the traditional `printf` with additional custom format specifiers.
+- **Custom Format Specifiers**: Extends the traditional `_printf` with additional custom format specifiers.
 - **String Reversal**: Introduces `%r` specifier for reversing strings, adding a unique touch to the standard functionality.
 - **Modular Design**: Codebase is organized into modular files for better maintainability and readability.
 
@@ -17,7 +19,7 @@ This project aims to implement a custom `_printf` function capable of handling v
 - `main.h`: Header file containing function prototypes.
 - `_printf.c`: Main implementation of the printf function.
 - `get_fun.c`: Additional helper functions.
-- `num_print.c`: More helper functions if needed.
+- `num_print.c`: handle the number.
 - ...
 
 ## Project Requirements

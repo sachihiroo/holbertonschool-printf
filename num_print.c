@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * num_print - check the code
+ * num_print - print num 
  * @args: pointer
  * Return: size
  */

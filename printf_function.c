@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * char_print - check the code
+ * char_print - print char
  * @args: pointer
  * Return: size
  */

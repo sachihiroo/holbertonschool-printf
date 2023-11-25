@@ -2,7 +2,7 @@
 /**
  * _printf - Entry point
  * @format: char
- * Return: byte size
+ * Return:size
  */
 int _printf(const char *format, ...)
 {

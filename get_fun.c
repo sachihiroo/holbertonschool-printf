@@ -7,7 +7,7 @@
  */
 int get_fun(char format, va_list args)
 {
-	int j = 0, size = 0;
+	int j, size = 0;
 	fmt f[] = {
 		{'c', char_print},
 		{'%', pert_print},

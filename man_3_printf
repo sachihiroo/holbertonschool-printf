@@ -37,7 +37,7 @@ Prints a signed integer, turning mere numbers into legends.
 Prints an unsigned integer, radiating positivity.
 
 .SH RETURN VALUE
-Upon successful return, \_printf will not just return a number; it returns the magic, the essence of coolness, the number of characters printed (excluding the null byte used to end output to strings).
+Upon successful return, \_printf will not just return a number; it returns the magic, the essence of coolness, the number of characters printed (excluding the null byte used to end output to strings)
 
 .SH EXAMPLES
 .sp

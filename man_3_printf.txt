@@ -1,0 +1,65 @@
+[4mPRINTF[24m(3)                        User Commands                       [4mPRINTF[24m(3)
+
+[1mNAME[0m
+       _printf - Unleash the Power of Custom Printing
+
+
+[1mSYNOPSIS[0m
+       [1m#include <stdio.h>[0m
+
+       [1mint _printf(const char *format, ...);[0m
+
+
+[1mDESCRIPTION[0m
+       [1m_printf [22mis not just a function; it's a symphony of printing perfection.
+       Crafted  by  the  genius  minds  of Nour Mouhamed and Saif at Holberton
+       School, this function redefines the art of printf.
+
+
+[1mFORMAT SPECIFIERS[0m
+       The following format specifiers are your palette for creation:
+
+
+       [1m%c     [22mPrints a single character in a blaze of glory.
+
+
+       [1m%%     [22mPrints a percent character because sometimes you just need more.
+
+
+       [1m%s     [22mPrints a string, transforming ordinary text into poetry.
+
+
+       [1m%i, %d [22mPrints a signed integer, turning mere numbers into legends.
+
+
+       [1m%u     [22mPrints an unsigned integer, radiating positivity.
+
+
+[1mRETURN VALUE[0m
+       Upon successful return, _printf will not just return a number;  it  re-
+       turns  the  magic,  the  essence  of coolness, the number of characters
+       printed (excluding the null byte used to end output to strings).
+
+
+[1mEXAMPLES[0m
+       [1m#include <stdio.h>[0m
+       int main() {
+       [4m_printf("Hello,[24m [4m%s![24m [4mThe[24m [4manswer[24m [4mis[24m [4m%d.0,[24m [4mworld[24m [4m,[24m [4m42);[0m
+       [1mreturn 0;[0m
+       }
+
+
+[1mSEE ALSO[0m
+       [1mfprintf[22m(3), [1msprintf[22m(3), [1msnprintf[22m(3)
+
+
+[1mAUTHOR[0m
+       Crafted by Nour Mohamed and Saif at Holberton School.
+
+
+[1mCOOLNESS DISCLAIMER[0m
+       Using _printf may cause a surge in coolness. Handle with care  and  em-
+       brace the awesomeness.
+
+
+Version 1.0                      November 2023                       [4mPRINTF[24m(3)

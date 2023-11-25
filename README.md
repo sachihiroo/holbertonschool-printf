@@ -31,6 +31,8 @@ This project aims to implement a custom `_printf` function capable of handling v
 - No more than 5 functions per file.
 - Prototypes of the functions are in the `main.h` header file.
 
+![Screenshot_2023-11-25_09_20_54](https://github.com/sachihiroo/holbertonschool-printf/assets/89344530/019ea278-70ca-4e55-949a-20652c95bccf)
+
 ## Usage
 
 To use the `_printf` function in your program, include the `main.h` header file and link it with the compiled printf files.
@@ -42,4 +44,5 @@ int main(void)
 {
     _printf("Hello, %s! The answer is %d.\n", "world", 42);
     return 0;
+
 }

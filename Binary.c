@@ -10,7 +10,7 @@ int binary(va_list args)
 	int s = 0;
 
 	dic_num = va_arg(args, int);
-	while (dic_num != 0)
+	while (dic_num > 0)
 	{
 		reminder = dic_num % 2;
 		dic_num /= 2;

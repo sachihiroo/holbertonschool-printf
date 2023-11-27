@@ -14,9 +14,9 @@ int binary(va_list args)
 	{
 		reminder = dic_num % 2;
 		dic_num /= 2;
-		_putchar(bin_num += reminder * i);
-		s += 1;
+		bin_num += reminder * i;
 		i *= 10;
 	}
+	s = printf("%d", bin_num);
 	return (s);
 }

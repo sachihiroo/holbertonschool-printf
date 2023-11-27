@@ -23,5 +23,5 @@ int binary(va_list args)
 		s += _putchar(bin_num[j]);
 	}
 
-	return (i);
+	return (s);
 }

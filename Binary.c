@@ -9,6 +9,7 @@ int binary(va_list args)
 	int bin_num[1000];
 	int i = 0;
 	int j;
+	int s = 0;
 
 	int n = va_arg(args, int);
 	while (n > 0)
@@ -17,9 +18,9 @@ int binary(va_list args)
 		n = n / 2;
 		i++;
 	}
-	for (j = i - 1; j >=0; j--)
+	for (j = i - 1; j >= 0; j--)
 	{
-		_putchar(bin_num[j]);
+		s += _putchar(bin_num[j]);
 	}
 
 	return (i);

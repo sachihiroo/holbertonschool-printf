@@ -19,4 +19,5 @@ int pert_print(__attribute__((unused)) va_list args);
 int string_print(va_list args);
 int num_print(va_list args);
 int unsigned_num(va_list args);
+int binary(va_list args);
 #endif

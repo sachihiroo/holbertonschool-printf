@@ -21,7 +21,7 @@ int binary(va_list args)
 		input = input / 2;
 		i++;
 	}
-	for (j = i - 1; i >= 0; j--)
+	for (j = i - 1; j >= 0; j--)
 	{
 		_putchar(bin[j] + '0');
 	}

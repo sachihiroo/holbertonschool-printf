@@ -19,7 +19,7 @@ int binary(va_list args)
 	}
 	for (j = i - 1; j >=0; j--)
 	{
-		printf("%d",bin_num[j]);
+		_putchar(bin_num[j]);
 	}
 
 	return (i);

@@ -6,23 +6,16 @@
  */
 int binary(va_list args)
 {
-	int bin_num[1000];
-	int i = 0;
-	int j;
-	int s = 0;
-
-	int n = va_arg(args, int);
-	while (n > 0)
+	int remainder, result = 0, multiplier = 1;
+	int input = va_arg(args, int);
+	int size;
+	while (input)
 	{
-		bin_num[i] = n % 2;
-		n = n / 2;
-		i++;
+		remainder = input % 2;
+		result = remainder * multiplier + result;
+		multiplier *= 10;
+		input /= 2;
 	}
-	s = i - 1;
-	for (j = i - 1; j >= 0; j--)
-	{
-		_putchar(bin_num[j]);
-	}
-
-	return (s);
+	size = printf("%d", result);
+	return (size);
 }

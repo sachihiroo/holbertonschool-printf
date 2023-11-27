@@ -15,6 +15,7 @@ int get_fun(char format, va_list args)
 		{'i', num_print},
 		{'d', num_print},
 		{'u', unsigned_num},
+		{'b', binary},
 		{'\0', NULL},
 	};
 

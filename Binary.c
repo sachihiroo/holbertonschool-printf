@@ -6,17 +6,21 @@
  */
 int binary(va_list args)
 {
-	int dic_num, bin_num = 0, i = 1, reminder;
-	int s = 0;
+	int bin_num[1000];
+	int i = 0;
+	int j;
 
-	dic_num = va_arg(args, int);
-	while (dic_num > 0)
+	int n = va_arg(args, int);
+	while (n > 0)
 	{
-		reminder = dic_num % 2;
-		dic_num /= 2;
-		bin_num += reminder * i;
-		i *= 10;
+		bin_num[i] = n % 2;
+		n = n / 2;
+		i++;
 	}
-	s = printf("%d", bin_num);
-	return (s);
+	for (j = i - 1; j >=0; j--)
+	{
+		printf("%d",bin_num[j]);
+	}
+
+	return (i);
 }

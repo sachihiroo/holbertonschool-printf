@@ -7,7 +7,7 @@
 int binary(va_list args) {
     int rem, result = 0, mul = 1;
     int input = va_arg(args, int);
-    char binary[1000];
+    char binary[32];
     int i = 0;
     int j, temp;
 
@@ -34,5 +34,5 @@ int binary(va_list args) {
         _putchar(binary[j]);
     }
 
-    return i;
+    return (i);
 }

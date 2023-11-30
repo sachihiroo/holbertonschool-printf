@@ -9,6 +9,7 @@ int binary(va_list args)
 	int i = 0, j;
 	int bin[100];
 	unsigned int input;
+
 	input = va_arg(args, int);
 	if (input == 0)
 	{
